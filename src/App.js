@@ -1,9 +1,9 @@
-
+import Quiz from "./Quiz";
 
 function App() {
   return (
     <div>
-      Hello world
+      <Quiz/>
     </div>
   );
 }
