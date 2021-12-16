@@ -21,7 +21,7 @@ const Quiz = (props) => {
     }
     
     return(
-        <div>
+        <div className="container">
             {/* {position}{quizData.quiz_questions[0].answer} */}
             {isQuizEnd ? 
             <QuizEnd resetClickHandler = {handleResetClick}/> :
@@ -32,3 +32,4 @@ const Quiz = (props) => {
 }
 
 export default Quiz
+

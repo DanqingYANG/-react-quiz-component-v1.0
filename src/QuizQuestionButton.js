@@ -1,13 +1,17 @@
 import React from 'react'
+// import './QuizQuestionButton.css'
 
 const QuizQuestionButton = (props) => {
     return(
-    <li>   
-        <button onClick = {() => props.clickHandler(props.button_text)}>
+    <div>   
+        <button className ="btn btn-primary btn-block mt-2" 
+        onClick = {() => props.clickHandler(props.button_text)}>
             {props.button_text}
         </button> 
-    </li>
+    </div>
     )
 }
 
 export default QuizQuestionButton
+
+

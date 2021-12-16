@@ -16,10 +16,10 @@ const QuizQuestion = (props) => {
     }
 
     return (
-        <div>
+        <div className="card p-2 m-2">
             <main>
                 <section>
-                    <p>
+                    <p className="card p-3 col-12">
                         {props.question.instruction_text} 
                     </p>
                 </section>
@@ -27,17 +27,20 @@ const QuizQuestion = (props) => {
                     <ul>
                         {
                             props.question.answer_options.map((value, i) => {
-                            return <QuizQuestionButton key={i} button_text = {value} clickHandler = {() => {handleClick(value)}}/>;
+                            return <QuizQuestionButton key={i} button_text = {value} 
+                            clickHandler = {() => {handleClick(value)}}/>;
                          })
                         }
                     </ul>
                 </section>
-                <li>
+                <div>
                     {incorrectAnswer? <p className='error'>Sorry, that's not right.</p> : ""}
-                </li>
+                </div>
             </main>
         </div>
     )
 }
 
 export default QuizQuestion
+
+
