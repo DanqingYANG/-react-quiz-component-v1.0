@@ -2,6 +2,18 @@ import React, { useState } from 'react'
 import QuizQuestion from './QuizQuestion'
 import QuizEnd from './QuizEnd'
 
+import { StyleSheet, View } from 'react-native';
+
+
+const styles = StyleSheet.create({
+
+  container: {
+    flex:1,
+    backgroundColor:'yellowgreen',
+  },
+
+})
+
 let quizData = require('./quiz_data.json')
 
 const Quiz = (props) => {
@@ -21,13 +33,15 @@ const Quiz = (props) => {
     }
     
     return(
-        <div className="container">
+        // <div className="container">
+        <View style={styles.container}>
             {/* {position}{quizData.quiz_questions[0].answer} */}
             {isQuizEnd ? 
             <QuizEnd resetClickHandler = {handleResetClick}/> :
             <QuizQuestion question = {quizData.quiz_questions[position]} 
             showNextQuestionHandler={showNextQuestion}/>}
-        </div>
+        </View>
+        // </div>
     )
 }
 
